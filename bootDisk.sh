@@ -33,8 +33,8 @@ sudo find ${FREEDOS}/freedos/packages/base/*.zip | sudo xargs -l unzip -d ${memd
 sudo unzip ${FREEDOS}/freedos/packages/boot/syslnxx.zip -d ${memdisk}/fdos
 
 sudo cp syslinux.cfg ${memdisk}/
-sudo cp autoexec.bat ${memdisk}/
-sudo cp config.sys   ${memdisk}/
+sudo cp ${memdisk}/fdos/autoexec.txt ${memdisk}/autoexec.bat
+sudo cp ${memdisk}/fdos/config.txt   ${memdisk}/config.sys
 
 sync ; sync ; sync;
 sudo umount ${memdisk}
